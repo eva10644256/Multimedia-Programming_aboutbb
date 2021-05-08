@@ -1,0 +1,492 @@
+.background {
+  background-color: #FFF8D7;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow-x: hidden
+}
+
+/* heder start  */
+.main-header {
+  width: 100%;
+  height: 70px;
+  background-color: #D3D0CF;
+  position: fixed;
+  /*固定位置定位*/
+  top: 0;
+  /*距離上方 0 像素*/
+  z-index: 1;
+  /*重疊時會在其他元素之上*/
+
+}
+
+.cp {
+  margin-top: 10px;
+}
+
+/*  menu start */
+nav {
+  margin-left: 50%;
+}
+
+nav ul {
+  list-style: none;
+  /* 移除項目符號 */
+  padding: 0;
+  width: 500px;
+  position: relative;
+  margin: 0 auto;
+  padding: 0 100px
+}
+
+nav li {
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+}
+
+nav a {
+  color: inherit;
+  /* 移除超連結顏色 */
+  display: block;
+  /* 讓 <a> 填滿 <li> */
+  font-size: 17px;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  /* 移除超連結底線 */
+}
+
+/* 滑鼠移到 <a> 時變成深底淺色 */
+nav a:hover {
+  background-color: rgb(115, 115, 115);
+  color: white;
+}
+
+.flex-nav {
+  display: flex;
+}
+
+
+
+/* 標題 */
+.lable {
+  margin-left: 70px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 100%;
+
+}
+
+.p1 {
+  float: left;
+  margin-top: 30px;
+  margin-right: 50px;
+  margin-left: 15%;
+
+
+}
+
+.text {
+  color: #842B00;
+  font-weight: bold;
+  font-size: 23px;
+  text-transform: uppercase;
+  display: inline-block;
+  border-bottom: 3px solid;
+  line-height: 40px;
+}
+
+/* 翻書關於我 */
+.left {
+
+  padding: 30px;
+  float: left;
+}
+
+.aboutme {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  background: #fff;
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+  box-shadow: 10px 20px 40px rgba(0, 0, 0, 0.25);
+  transition: 1s;
+}
+
+.card:hover {
+  transform: translateX(50%);
+}
+
+.card .imgbox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transform-origin: left;
+  transform-style: preserve-3d;
+  background: #000;
+  transition: 1s;
+  box-shadow: 10px 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.card:hover .imgbox {
+  transform: rotateY(-180deg);
+}
+
+.card .imgbox img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+.card .imgbox img:nth-child(2) {
+  transform: rotateY(180deg);
+}
+
+.card .details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card .details .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card .details .content h2 {
+
+  font-weight: bold;
+  line-height: 150%;
+}
+
+/*第二行字的顏色字形*/
+.card .details .content h2 span {
+  color: #3F3F3F;
+  font-weight: lighter;
+  font-size: 0.7em;
+}
+
+.card .details .content .social-icons {
+  position: relative;
+  display: flex;
+  margin-top: 10px;
+}
+
+.card .details .content .social-icons a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background: #333;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  margin: 5px;
+  font-size: 18px;
+  transition: 0.2s;
+}
+
+/*icon圖示觸碰後顏色*/
+.card .details .content .social-icons a:hover {
+  background: #e21212;
+}
+
+.right {
+
+  padding: 40px;
+  padding-left: 160px;
+  float: left;
+}
+
+.text-2 {
+  line-height: 50px;
+  padding: 20px;
+  background: #fbe9e7;
+  border: 2px#5a7169 dashed;
+  text-align: center;
+  border-radius: 30px;
+}
+
+.p2 {
+  float: left;
+  height: auto;
+  text-align: center;
+  margin: 50px;
+  margin-top: 40px;
+
+}
+
+.container2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card2 {
+  height: 300px;
+  width: 250px;
+  margin: 0 20px;
+  background: white;
+  transition: 0.4s;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.card2:hover {
+  height: 400px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card2 .img2 {
+  height: 200px;
+  width: 100%;
+}
+
+.card2 .img2 img {
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.card2 .top-text2 {
+  padding: 10px;
+}
+
+.card2 .top-text2 .school {
+  font-size: 25px;
+  font-weight: 600;
+  color: #202020;
+}
+
+.card2 .top-text2 p {
+  font-size: 20px;
+  font-weight: 600;
+  color: #e74c3c;
+  line-height: 20px;
+}
+
+.card2 .bottom-text2 {
+  padding: 0 20px 10px 20px;
+  margin-top: 5px;
+  background: white;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.1s;
+}
+
+.card2:hover .bottom-text2 {
+  opacity: 1;
+  visibility: visible;
+}
+
+.card2 .bottom-text2 .text2 {
+  text-align: justify;
+}
+
+.p3 {
+  float: left;
+  text-align: center;
+  margin: 3%;
+  margin-top: 40px;
+  width: 80%;
+}
+
+
+.bars {
+  width: 95%;
+  float: left;
+  padding: 0;
+  text-align: left;
+  margin-left: 10%;
+}
+
+.bars .skills {
+  margin-top: 36px;
+  list-style: none;
+}
+
+.bars li {
+  position: relative;
+  margin-bottom: 60px;
+  background: #ccc;
+  height: 42px;
+  border-radius: 3px;
+}
+
+.bar-expand {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0;
+  padding-right: 24px;
+  background: #313131;
+  display: inline-block;
+  height: 42px;
+  line-height: 42px;
+  border-radius: 3px 0 0 3px;
+}
+
+.b1 {
+  width: 40%;
+  text-align: right;
+  color: white;
+
+}
+
+.b2 {
+  width: 30%;
+  text-align: right;
+  color: white;
+}
+
+.b3 {
+  width: 60%;
+  text-align: right;
+  color: white;
+}
+
+.b4 {
+  width: 70%;
+  text-align: right;
+  color: white;
+}
+
+.b5 {
+  width: 80%;
+  text-align: right;
+  color: white;
+}
+
+.bars li em {
+  font: 15px 'opensans-bold', sans-serif;
+  color: #313131;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: normal;
+  position: relative;
+  top: -36px;
+}
+
+.p4 {
+  float: left;
+  text-align: center;
+  margin: 10%;
+  margin-top: 40px;
+  width: 80%;
+}
+
+.goal {
+  width: 100%;
+  height: 200px;
+  text-align: center;
+  display: inline-block;
+  margin-top: 35px;
+}
+
+.boar {
+  width: 100%;
+  height: 200px;
+  display: inline-block;
+  border-radius: 30px;
+  border-style: dashed;
+  border-width: 2px;
+  border-color: #5a7169;
+  background: #fbe9e7;
+}
+
+.T {
+  font-size: 28px;
+  font-family: Arial;
+  color: #5a7169;
+  float: left;
+  margin-top: 5px;
+  margin-left: 20px;
+}
+
+.W {
+  width: 750px;
+  font-weight: bold;
+  font-size: 35px;
+  line-height: 25px;
+  letter-spacing: 2px;
+  text-align: center;
+  margin: 0 auto;
+  color: #5a7169;
+  font-family: 微軟正黑體;
+  margin-top: 100px;
+  text-shadow: 0.05em 0.05em 0.03em black
+}
+
+.p5 {
+  float: left;
+  width: 80%;
+  height: 300px;
+  display: flex;
+  margin: 10%;
+  margin-top: 40px;
+
+  justify-content: center;
+}
+
+.a5 {
+  background-color: #7f8c8d;
+  width: 900px;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.b6 {
+  transition: .7s;
+  overflow: hidden;
+}
+
+.b6:hover {
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+
+.b6 img {
+  width: 400px;
+}
+
+.footer {
+  width: 100%;
+  background-color: #D3D0CF;
+  height: 80px;
+  overflow: hidden;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.f {
+  margin-top: 28px;
+}
